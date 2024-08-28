@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public ParticleSystem particleSystem;
     [Header("Nave parameters")]
     [SerializeField] private float naveAcceleration = 10f;
     [SerializeField] private float naveMaxVelocity = 10f;
@@ -46,21 +47,9 @@ public class Player : MonoBehaviour
 
     private void HandleShooting()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space))
         {
-            Rigidbody2D bullet = Instantiate(tiroPrefab, bulletSpawn.position, Quaternion.identity);
-
-            Vector2 naveVelocity = naveRigidbody.velocity;
-            Vector2 naveDirection = transform.up;
-            float naveForwardSpeed = Vector2.Dot(naveVelocity, naveDirection);
-
-            if (naveForwardSpeed < 0)
-            {
-                naveForwardSpeed = 0;
-            }
-            bullet.velocity = naveDirection * naveForwardSpeed;
-
-            bullet.AddForce(bulletSpeed * transform.up, ForceMode2D.Impulse);
+            particleSystem.Emit(1);
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
