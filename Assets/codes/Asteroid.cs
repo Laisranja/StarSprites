@@ -19,14 +19,28 @@ public class Asteroid : MonoBehaviour
 
         gameManager.asteroidCount++;
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Tiro"))
-        {
+    // private void OnTriggerEnter2D(Collider2D collision)
+    // {
+    //     if (collision.CompareTag("Tiro"))
+    //     {
+    //         gameManager.asteroidCount--;
+
+    //         Destroy(collision.gameObject);
+
+    //         if (size > 1)
+    //         {
+    //             for (int i = 0; i < 2; i++)
+    //             {
+    //                 Asteroid newAsteroid = Instantiate(this, transform.position, Quaternion.identity);
+    //                 newAsteroid.size = size - 1;
+    //                 newAsteroid.gameManager = gameManager;
+    //             }
+    //         }
+    //         Destroy(gameObject);
+    //     }
+    // }
+    private void OnParticleCollision(GameObject other) {
             gameManager.asteroidCount--;
-
-            Destroy(collision.gameObject);
-
             if (size > 1)
             {
                 for (int i = 0; i < 2; i++)
@@ -37,7 +51,6 @@ public class Asteroid : MonoBehaviour
                 }
             }
             Destroy(gameObject);
-        }
     }
 }
 

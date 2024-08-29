@@ -6,16 +6,16 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public ParticleSystem particleSystem;
+    public ParticleSystem myParticleSystem;
     [Header("Nave parameters")]
     [SerializeField] private float naveAcceleration = 10f;
     [SerializeField] private float naveMaxVelocity = 10f;
     [SerializeField] private float naveRotationSpeed = 180f;
-    [SerializeField] private float bulletSpeed = 8f;
+    //[SerializeField] private float bulletSpeed = 8f;
 
     [Header("Object References")]
-    [SerializeField] private Transform bulletSpawn;
-    [SerializeField] private Rigidbody2D tiroPrefab;
+    //[SerializeField] private Transform bulletSpawn;
+    //[SerializeField] private Rigidbody2D tiroPrefab;
 
     private Rigidbody2D naveRigidbody;
     private bool isAlive = true;
@@ -47,14 +47,14 @@ public class Player : MonoBehaviour
 
     private void HandleShooting()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            particleSystem.Emit(1);
+            myParticleSystem.Emit(1);
         }
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.CompareTag("Asteroid"))
+        if (collision.gameObject.CompareTag("Asteroid"))
         {
             isAlive = false;
 

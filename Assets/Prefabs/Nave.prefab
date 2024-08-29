@@ -207,13 +207,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e233bc5f0321c094280f105b13bb6fa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particleSystem: {fileID: 8711777818629555277}
+  myParticleSystem: {fileID: 8711777818629555277}
   naveAcceleration: 10
   naveMaxVelocity: 10
   naveRotationSpeed: 180
-  bulletSpeed: 8
-  bulletSpawn: {fileID: 0}
-  tiroPrefab: {fileID: 0}
 --- !u!50 &2989732737169568073
 Rigidbody2D:
   serializedVersion: 4
@@ -313,7 +310,7 @@ Transform:
   m_GameObject: {fileID: 7237547866667584984}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.009, y: 1.345, z: 0.001}
+  m_LocalPosition: {x: 0.009, y: 1.72, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -392,7 +389,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 0
+  moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
   randomSeed: 0
@@ -402,7 +399,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 1
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -455,7 +452,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 20
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -573,7 +570,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.5
       minScalar: 1
       maxCurve:
         serializedVersion: 2

@@ -469,7 +469,7 @@ PrefabInstance:
     - target: {fileID: 2966051177840856544, guid: e96f4290938a2384e85defa90d790e7e, type: 3}
       propertyPath: bulletSpawn
       value: 
-      objectReference: {fileID: 1834442139819507719}
+      objectReference: {fileID: 0}
     - target: {fileID: 2966051177840856544, guid: e96f4290938a2384e85defa90d790e7e, type: 3}
       propertyPath: bulletSpeed
       value: 26
@@ -494,6 +494,22 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8711777818629555277, guid: e96f4290938a2384e85defa90d790e7e, type: 3}
+      propertyPath: InitialModule.gravitySource
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8711777818629555277, guid: e96f4290938a2384e85defa90d790e7e, type: 3}
+      propertyPath: CollisionModule.m_Bounce.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8711777818629555277, guid: e96f4290938a2384e85defa90d790e7e, type: 3}
+      propertyPath: CollisionModule.collidesWith.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8711777818629555277, guid: e96f4290938a2384e85defa90d790e7e, type: 3}
+      propertyPath: CollisionModule.multiplyColliderForceByCollisionAngle
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 205217919478638695, guid: e96f4290938a2384e85defa90d790e7e, type: 3}
     m_RemovedGameObjects: []
@@ -506,11 +522,6 @@ PrefabInstance:
 --- !u!1 &1834442139819507718 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7067536658176304878, guid: e96f4290938a2384e85defa90d790e7e, type: 3}
-  m_PrefabInstance: {fileID: 1834442139819507717}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1834442139819507719 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7351185704014925710, guid: e96f4290938a2384e85defa90d790e7e, type: 3}
   m_PrefabInstance: {fileID: 1834442139819507717}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1834442139819507720
